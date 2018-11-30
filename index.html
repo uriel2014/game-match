@@ -2,11 +2,59 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matching Letters</title>
+    <link rel="icon" href="./resources/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="./resources/reset.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./resources/styles.css" type="text/css">
+
+    <!-- Here we will addthe Bootstrap Framework right after reset.css and before styles.css such that they can
+    be take into consideration and not overwritten by styles.css. Keep in mind that styles.css can
+    override at anytime but with Bootstrap being first, this will allow Bootstrap to work more effectively-->
   </head>
   <body>
+
+
+  <!-- Bootstrap will be used in the form of html -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-xs-12">
+        <h1>Matching Game</h1>
+
+        <h3>Rules</h3>
+        <p>Click on a card to reveal the number on the other side.
+        Click on a second card to try and find a match to the first.
+        if you succeed, the pair will be removed from play. If not, try again!</p>
+
+        <h3>How To Win</h3>
+
+        <p>You win when all pairs have been found.</p>
+      </div>
+      <div class="col-md-9 col-xs-12" id="game">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+    <!-- We will link our js files at the end of the file with the script tags
+    to help the html file load faster. Keep in mind that if Jquery is to be
+    used we need to refer to the library first and then place the script files
+    after to it. Plays similar role to that of Bootstrap.-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./resources/game-match.js"></script>
+
+        <script type="text/javascript" src="./resources/tests.js"></script>
+
 
   </body>
 </html>
